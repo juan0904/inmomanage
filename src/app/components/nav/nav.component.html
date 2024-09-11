@@ -2,11 +2,16 @@
     <mat-sidenav #sidenav mode="side" [(opened)]="isSidenavOpen">
       <mat-toolbar>Menu</mat-toolbar>
       <mat-nav-list>
+        <mat-divider></mat-divider>
+
         <a mat-list-item routerLink="/arrendatario" (click)="closeSidenav()">Arrendatario</a>
         <a mat-list-item routerLink="/propiedades" (click)="closeSidenav()">Propiedades</a>
         
         <a mat-list-item routerLink="/mediopago" (click)="closeSidenav()">Medios de Pago</a>
         <a mat-list-item routerLink="/propietarios" (click)="closeSidenav()">Propietarios</a>
+
+        <mat-divider></mat-divider>
+
         <a mat-list-item routerLink="/usuario" (click)="closeSidenav()">Usuario</a>
       </mat-nav-list>
     </mat-sidenav>
