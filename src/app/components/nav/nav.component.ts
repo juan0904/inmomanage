@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterOutlet } from '@angular/router';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 
 @Component({
@@ -20,7 +21,8 @@ import { RouterOutlet } from '@angular/router';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatExpansionModule
   ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
