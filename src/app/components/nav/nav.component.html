@@ -1,24 +1,39 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #sidenav mode="side" [(opened)]="isSidenavOpen">
-      <mat-toolbar>Menu</mat-toolbar>
-      <mat-nav-list>
-        <a mat-list-item routerLink="/arrendatario" (click)="closeSidenav()">Arrendatario</a>
-        <a mat-list-item routerLink="/propiedades" (click)="closeSidenav()">Propiedades</a>
-        
-        <a mat-list-item routerLink="/mediopago" (click)="closeSidenav()">Medios de Pago</a>
-        <a mat-list-item routerLink="/propietarios" (click)="closeSidenav()">Propietarios</a>
-        <a mat-list-item routerLink="/usuario" (click)="closeSidenav()">Usuario</a>
-      </mat-nav-list>
-    </mat-sidenav>
-  
-    <mat-sidenav-content>
-      <mat-toolbar color="primary">
-        <button mat-icon-button (click)="sidenav.toggle()">
-          <mat-icon>menu</mat-icon>
-        </button>
-        <span>Inmo-Admin</span>
-      </mat-toolbar>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-  
+  <mat-sidenav #sidenav mode="side" [(opened)]="isSidenavOpen">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+      <strong>Gestion</strong>
+      </mat-list-item>
+      <a mat-list-item routerLink="/arrendatario" (click)="closeSidenav()">Arrendatario</a>
+      <a mat-list-item routerLink="/propietarios" (click)="closeSidenav()">Propietarios</a>
+      <a mat-list-item routerLink="/propiedades" (click)="closeSidenav()">Propiedades</a>
+
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <strong>Maestros</strong>
+      </mat-list-item>
+      <a mat-list-item routerLink="/mediopago" (click)="closeSidenav()">Medios de Pago</a>
+     
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <strong>Permisos</strong>
+      </mat-list-item>
+      <a mat-list-item routerLink="/usuario" (click)="closeSidenav()">Usuario</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Inmo-Admin</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
